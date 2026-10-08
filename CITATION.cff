@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this systematic-review corpus or replication package, please cite it."
+title: "Context and Feedback in Repository-Level LLM Unit-Test Generation: Replication Package"
+type: dataset
+authors:
+  - family-names: Mistry
+    given-names: Diptajoy
+abstract: >
+  Public replication package for a systematic review of LLM-based unit-test
+  generation focusing on context, feedback/repair, repository realism, and
+  evaluation from executability through coverage and mutation to real-fault
+  evidence. Frozen primary corpus: 64 studies; secondary surveys: 10.
+  Corpus freeze: 2026-10-05. This package contains data, protocol, and
+  reproduction scripts only (no manuscript).
+keywords:
+  - systematic review
+  - replication package
+  - large language models
+  - unit test generation
+  - mutation testing
+  - fault detection
+  - software testing
+version: "1.0.0-pre"
+date-released: "2026-10-08"
+# repository-code: add public GitHub URL when available
+# doi: add Zenodo (or other archive) DOI when available — do not invent
+license: "MIT AND CC-BY-4.0"

@@ -1,0 +1,36 @@
+# Secrets / local env
+.env
+.env.*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Node (if ever added)
+node_modules/
+
+# Scratch
+*.log
+*.tmp
+*.bak
+*~
+
+# Never ship manuscript materials in this public data repo
+paper/
+*.pdf
+*.tex
+*.bib
+*.aux
+*.bbl
+*.blg
+*.out
+*.toc
+*.synctex.gz

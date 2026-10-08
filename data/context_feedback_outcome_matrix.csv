@@ -1,0 +1,65 @@
+Paper_ID,Context_Codes,Feedback_Codes,Repair_Codes,Evaluation_Codes,Realism_Level,Ablation,Controlled_Comparison,Main_Outcome,Evidence_Strength,Title
+P001,C0;C1,F0,R0,E2;E3;E5,RL1,NR,partial,E2;E3;E5,medium,Unit Test Case Generation with Transformers and Focal Context
+P002,C0;C2,F3,R4,E3,RL1,yes,yes,E3,medium,CodaMosa: Escaping Coverage Plateaus in Test Generation with Pre-trained Large Language Models
+P003,C0;C1,F0,R0,E3;E4;E5,RL1,NR,yes,E3;E4;E5,medium,A3Test: Assertion-Augmented Automated Test case generation
+P004,C0;C1;C4,F2,R3,E2;E3,RL3,yes,yes,E2;E3,medium,An Empirical Evaluation of Using Large Language Models for Automated Unit Test Generation
+P005,C3;C5,F1;F2;F3;F7,R2;R6,E1;E2;E3;E6,RL4,NR,partial,E1;E2;E3;E6,medium,Automated Unit Test Improvement using Large Language Models at Meta
+P006,C3,F0,R0,E2;E3,RL3,NR,yes,E2;E3,medium,CPP-UT-Bench: Can LLMs Write Complex Unit Tests in C++?
+P007,C0,F0,R0,E2;E3;E5,RL1,NR,yes,E2;E3;E5,medium,ChatGPT vs SBST: A Comparative Assessment of Unit Test Suite Generation
+P008,C0;C1;C2,F1;F2,R2;R3,E1;E2;E3,RL1,NR,yes,E1;E2;E3,medium,ChatUniTest: A Framework for LLM-Based Test Generation
+P009,C1;C2,F3,R4,E2;E3,RL1,yes,yes,E2;E3,medium,Code-Aware Prompting: A Study of Coverage-Guided Test Generation in Regression Setting using LLM
+P010,C3,F0,R0,E3;E4;E5,RL1,yes,yes,E3;E4;E5,medium,Domain Adaptation for Code Model-Based Unit Test Case Generation
+P011,C0,F4,R5,E3;E4;E5,RL1,yes,yes,E3;E4;E5,medium,Effective test generation using pre-trained Large Language Models and mutation testing
+P012,C0;C1,F1;F2,R2;R3;R7,E1;E2;E3,RL1,NR,yes,E1;E2;E3,medium,Evaluating and Improving ChatGPT for Unit Test Generation
+P013,C2,F0,R0,E3,RL1,NR,yes,E3,medium,HITS: High-coverage LLM-based Unit Test Generation via Method Slicing
+P014,C0;C1,F0,R0,E3,RL3,yes,yes,E3,medium,On the Evaluation of Large Language Models in Unit Test Generation
+P015,C2,F0,R0,E3,RL4,NR,partial,E3,medium,Static Program Analysis Guided LLM Based Unit Test Generation
+P016,C0;C1,F1;F2;F3,R2;R3;R4;R6,E2;E3,RL1,NR,yes,E2;E3,medium,TestART: Improving LLM-based Unit Testing via Co-evolution of Automated Generation and Repair Iteration
+P017,C1,F1;F2,R2;R3,E1;E2;E3;E5,RL3,yes,yes,E1;E2;E3;E5,medium,TestBench: Evaluating Class-Level Test Case Generation Capability of Large Language Models
+P018,C3,F0,R0,E3;E4,RL3,NR,yes,E3;E4,medium,TestGenEval: A Real World Unit Test Generation and Test Completion Benchmark
+P019,C0;C1,F0,R0,E3,RL1,NR,yes,E3,medium,UniTSyn: A Large-Scale Dataset Capable of Enhancing the Prowess of Large Language Models for Program Testing
+P020,C0;C1,F0,R0,E1;E2;E3,RL1,yes,yes,E1;E2;E3,medium,Using Large Language Models to Generate JUnit Tests: An Empirical Study
+P021,C0;C1,F0,R0,E3;E5,RL1,yes,yes,E3;E5,medium,A Large-Scale Empirical Study on Fine-Tuning Large Language Models for Unit Testing
+P022,C1;C2,F0,R0,E3;E6,RL4,NR,partial,E3;E6,medium,ASTER: Natural and Multi-Language Unit Test Generation with LLMs
+P023,C2;C4,F3;F5,R4,E3,RL3,NR,yes,E3,medium,Advancing Code Coverage: Incorporating Program Analysis with Large Language Models
+P024,C0;C1,F1;F2,R2;R3;R7,E1;E2;E3;E5,RL1,NR,yes,E1;E2;E3;E5,medium,"A Cascaded Pipeline for Self-Directed, Model-Agnostic Unit Test Generation via LLMs"
+P025,C0;C1,F3,R4,E3,RL1,NR,yes,E3,medium,CoverUp: Effective High Coverage Test Generation for Python
+P026,C1;C5,F1;F2,R2;R3,E1;E2,RL3,NR,partial,E1;E2,medium,CubeTesterAI: Automated JUnit Test Generation Using the LLaMA Model
+P027,C3;C4,F0,R0,E3,RL3,yes,yes,E3,medium,Enhancing LLM’s Ability to Generate More Repository-Aware Unit Tests Through Precise Context Injection
+P028,C2,F0,R0,E3;E6,RL3,NR,yes,E3;E6,medium,PALM: Synergizing Program Analysis and LLMs to Enhance Rust Unit Test Coverage
+P029,C0,F5,R0,E0,RL0,NR,yes,E0,medium,Reinforcement Learning from Automatic Feedback for High-Quality Unit Test Generation
+P030,C0,F0,R0,E3;E4;E5,RL1,NR,yes,E3;E4;E5,medium,"Test Wars: A Comparative Study of SBST, Symbolic Execution, and LLM-Based Approaches to Unit Test Generation"
+P031,C3,F2;F3;F6,R7,E2;E3;E4,RL3,NR,yes,E2;E3;E4,medium,"TestForge: Feedback-Driven, Agentic Test Suite Generation"
+P032,C2;C3;C4,F2;F3,R3;R4,E3,RL3,yes,yes,E3,medium,Type-aware LLM-based Regression Test Generation for Python Programs
+P033,C0;C1,F3,R4,E1;E3;E5,RL1,NR,yes,E1;E3;E5,medium,Automated Unit Test Generation via Chain-of-Thought Prompt and Reinforcement Learning from Coverage Feedback
+P034,C3;C5,F1,R2,E1;E3,RL3,yes,yes,E1;E3,medium,CITYWALK : Enhancing LLM-Based C++ Unit Test Generation via Project-Dependency Awareness and Language-Specific Knowledge
+P035,C3;C5,F5,R6,E1;E3,RL4,yes,yes,E1;E3,medium,Context Matters: Improving the Practical Reliability of LLM-Based Unit Test Generation (Experience Paper)
+P036,C0;C1,F0,R0,E3;E4;E5,RL1,yes,yes,E3;E4;E5,medium,Do Coverage and Mutation Scores of LLM-Generated Test Suites Correlate with Their Effectiveness? (Replicability Study)
+P037,C0;C1,F1;F2;F3,R2;R3;R4,E3;E4,RL3,yes,yes,E3;E4,medium,How well LLM-based test generation techniques perform with newer LLM versions?
+P038,C0;C1,F0,R0,E3;E4,RL1,yes,yes,E3;E4,medium,Impact of code context and prompting strategies on automated unit test generation with modern general-purpose large language models
+P039,C3;C4;C5,F0,R0,E3;E6,RL3,yes,yes,E3;E6,medium,Knowledge Matters: Injecting Project and Testing Knowledge into LLM-based Unit Test Generation
+P040,C2,F3;F5,R3;R4,E3,RL3,NR,yes,E3,medium,LLM Test Generation via Iterative Hybrid Program Analysis
+P041,C0;C1,F0,R0,E3;E5,RL1,NR,yes,E3;E5,medium,LLM vs. Human Unit Tests: Fault Detection on Real Python Bugs
+P042,C3;C2,F1;F2,R2;R3;R6;R7,E3;E4,RL3,yes,yes,E3;E4,medium,LLM-based Low-Level Integration Test Generation for Java
+P043,C0;C2,F4,R5,E4,RL1,yes,yes,E4,medium,Mutation-Guided Unit Test Generation With a Large Language Model
+P044,C3;C5,F1,R2,E3,RL4,yes,yes,E3,medium,Optimizing Context and Cost in LLM ‐Based Unit Test Generation: A Study on External Dependency Retrieval Strategies
+P045,C4,F7,R0,E5;E6,RL4,NR,partial,E5;E6,medium,Uncovering Business Logic Bugs via Semantics-Driven Unit Test Generation
+P046,C3,F0,R0,E3,RL3,yes,yes,E3,medium,XREPOTEST: Benchmarking Multilingual Repository-Level Unit Test Generation for Large Language Models
+P047,C3,F0,R0,E3,RL1,NR,NR,E3,low,LLM-based Unit Test Generation via Property Retrieval
+P048,C0;C1,F0,R0,E3,RL1,NR,NR,E3,low,"Large-scale, Independent and Comprehensive study of the power of LLMs for test case generation"
+P049,C0;C1,F0,R0,E3,RL1,NR,NR,E3,low,Unit Test Generation using Generative AI : A Comparative Performance Analysis of Autogeneration Tools
+P050,C0;C1,F0,R0,E3,RL1,NR,NR,E3,low,"AI-Powered Unit Test Generation via Multi-LLM Chaining: A Case Study With GPT-4o, Gemini, and Claude-3.5"
+P051,C0;C1,F0,R0,E3,RL1,NR,NR,E3,low,Clarifying Semantics of In-Context Examples for Unit Test Generation
+P052,C0;C1,F0,R0,E3,RL1,NR,NR,E3,low,Evaluating the Effectiveness of Large Language Models in Automated Unit Test Generation
+P053,C3,F0,R0,E3,RL1,NR,NR,E3,low,EvoGPT: Leveraging LLM-Driven Seed Diversity to Improve Search-Based Test Suite Generation
+P054,C0;C1,F0,R0,E3,RL1,NR,NR,E3,low,LLMs for Automated Unit Test Generation and Assessment in Java: The AgoneTest Framework
+P055,C3,F0,R0,E3,RL1,NR,NR,E3,low,LSPAI: An IDE Plugin for LLM-Powered Multi-Language Unit Test Generation with Language Server Protocol
+P056,C3,F0,R0,E3,RL1,NR,NR,E3,low,LSPRAG: LSP-Guided RAG for Language-Agnostic Real-Time Unit Test Generation
+P057,C0;C1,F0,R0,E3,RL1,NR,NR,E3,low,Learning to Generate Unit Test via Adversarial Reinforcement Learning
+P058,C0;C1,F0,R0,E3,RL1,NR,NR,E3,low,Navigating the Labyrinth: Path-Sensitive Unit Test Generation with Large Language Models
+P059,C3,F0,R0,E3,RL1,NR,NR,E3,low,Reference-Based Retrieval-Augmented Unit Test Generation
+P060,C0;C1,F0,R0,E3,RL1,NR,NR,E3,low,Test Intention Guided LLM-Based Unit Test Generation
+P061,C0;C1,F0,R7,E3;E4,RL1,NR,NR,E3;E4,low,UAgent: Adversarial Co-evolution for Targeted Bug Revelation in Unit Testing
+P062,C0;C1,F0,R0,E3,RL1,NR,NR,E3,low,Evaluating LLM-Based Test Generation Under Software Evolution
+P063,C0;C1,F0,R0,E3,RL1,NR,NR,E3,low,Prompt engineering in LLMs for automated unit test generation: A large-scale study
+P064,C3,F0,R0,E3,RL1,NR,NR,E3,low,Retrieval-Augmented Unit Test Suggestion Generation

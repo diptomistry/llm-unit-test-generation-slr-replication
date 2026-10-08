@@ -1,0 +1,23 @@
+Stage,Count,Unit,Source,Notes
+identification_api_raw_hits,2132,records,search_log.md,OpenAlex+Semantic Scholar+Crossref pre-dedupe
+identification_deduplicated_candidates,995,unique records,search_log.md,Phase 1 dedupe
+identification_heuristic_likely_include,363,records,search_log.md,Keyword triage only; NOT formal IC/EC
+identification_deep_research_external,46,studies,phase2_final_report.md,Independent DR corpus reconciled; overlaps Phase1
+screening_phase2_title_abstract_decisions,420,records,phase2_screening_decisions.csv,Includes overlapping DR and Cursor candidates
+screening_phase2_INCLUDE,146,records,phase2_screening_decisions.csv,Not yet unique primary studies
+screening_phase2_EXCLUDE,235,records,phase2_screening_decisions.csv,
+screening_phase2_UNCERTAIN,37,records,phase2_screening_decisions.csv,
+screening_phase2_SECONDARY,2,records,phase2_screening_decisions.csv,Additional secondaries resolved separately to 10
+eligibility_fulltext_shortlist_screened,100,records,fulltext_screening_decisions.csv,Provisional shortlist screen
+eligibility_FINAL_INCLUDE,18,studies,fulltext_screening_decisions.csv,Shortlist additions retained
+eligibility_EXCLUDE,41,records,fulltext_screening_decisions.csv,
+eligibility_UNCERTAIN_FULLTEXT,22,records,fulltext_screening_decisions.csv,
+eligibility_BACKGROUND,12,records,fulltext_screening_decisions.csv,
+eligibility_SECONDARY,5,records,fulltext_screening_decisions.csv,
+eligibility_DUPLICATE_DR,2,records,fulltext_screening_decisions.csv,
+included_primary_from_DR46,46,studies,phase2_final_report.md,Reconciled Deep Research set
+included_primary_from_shortlist,18,studies,phase2_final_report.md,Axis-focused FINAL_INCLUDE
+included_primary_total,64,unique studies,final_primary_corpus.csv,46+18; citation chaining added 0
+included_secondary_surveys,10,studies,final_secondary_studies.csv,Tracked separately; not in n=64
+citation_chaining_round1_candidates_logged,64,candidate titles,citation_chaining_log.md,Eligible candidates pending; none added at freeze
+limitation,,,phase4,Do not sum 2132+46 or 146+46 as unique studies; sets overlap. Unique primary identity is the frozen n=64.
