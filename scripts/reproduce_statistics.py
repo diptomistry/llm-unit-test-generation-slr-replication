@@ -2,7 +2,7 @@
 """
 Reproduce core corpus statistics from the frozen CSVs in ../data/.
 
-Usage (from public-replication-package/):
+Usage (from repository root):
   python3 scripts/reproduce_statistics.py
 
 Requires only the Python standard library. Uses paths relative to this package.
@@ -52,10 +52,18 @@ def main() -> None:
         for c in split_codes(r.get("Evaluation_Codes", "")):
             e[c] += 1
 
+    e3 = e["E3"]
     e4 = e["E4"]
     e5 = e["E5"]
+    e6 = e["E6"]
     bugs = sum(1 for r in prim if (r.get("Real_Bugs") or "").lower() == "yes")
     mut = sum(1 for r in prim if (r.get("Mutation") or "").lower() == "yes")
+    f4 = sum(1 for r in prim if "F4" in split_codes(r.get("Feedback_Codes", "")))
+    rl34 = sum(
+        1
+        for r in prim
+        if any(x in split_codes(r.get("Realism_Level", "")) for x in ("RL3", "RL4"))
+    )
 
     p061 = next(r for r in prim if r["Paper_ID"] == "P061")
     p037 = next(r for r in prim if r["Paper_ID"] == "P037")
@@ -71,13 +79,31 @@ def main() -> None:
     print("=== Flags ===")
     print(f"  Mutation flag yes: {pct(mut, n)}")
     print(f"  Real_Bugs flag yes: {pct(bugs, n)}")
+    print(f"  Feedback F4: {pct(f4, n)}")
+    print(f"  Realism RL3∪RL4: {pct(rl34, n)}")
     print()
     print("=== Audited targets ===")
+    print(f"  E3 (coverage-related): {pct(e3, n)}  [expect 60/64 (93.8%)]")
     print(f"  E4 (mutation evaluation): {pct(e4, n)}  [expect 12/64 (18.8%)]")
-    print(f"  E5 (real-fault evidence): {pct(e5, n)}  [expect 13/64 (20.3%)]")
-    assert e4 == 12 and e5 == 13 and bugs == 13 and mut == 12
+    print(f"  E5 (real-fault evidence): {pct(e5, n)}  [expect 9/64 (14.1%)]")
+    print(f"  E6 (industrial/developer): {pct(e6, n)}  [expect 5/64 (7.8%)]")
+    assert e3 == 60 and e4 == 12 and e5 == 9 and e6 == 5
+    assert bugs == 9 and mut == 12 and f4 == 2 and rl34 == 23
+    e5_ids = sorted(r["Paper_ID"] for r in prim if "E5" in split_codes(r.get("Evaluation_Codes", "")))
+    expect_e5 = ["P007", "P011", "P017", "P021", "P030", "P033", "P036", "P041", "P045"]
+    assert e5_ids == expect_e5, f"E5 ID set mismatch: {e5_ids}"
+    rb_ids = sorted(r["Paper_ID"] for r in prim if (r.get("Real_Bugs") or "").lower() == "yes")
+    assert rb_ids == expect_e5, f"Real_Bugs ID set mismatch: {rb_ids}"
+    print(f"  E5 IDs: {', '.join(e5_ids)}")
     print()
     print("=== Spot checks ===")
+    p001 = next(r for r in prim if r["Paper_ID"] == "P001")
+    print(f"  P001 Year={p001.get('Year')} DOI={p001.get('DOI')} Preprint={p001.get('Preprint_URL')}")
+    assert p001.get("Year") == "2020"
+    assert "2009.05617" in (p001.get("DOI") or "") or "2009.05617" in (p001.get("Preprint_URL") or "")
+    assert "3524842.3528009" not in (p001.get("DOI") or "")
+    assert "E5" not in split_codes(p001.get("Evaluation_Codes", ""))
+    assert (p001.get("Real_Bugs") or "").lower() == "no"
     print(f"  P061 Evaluation_Codes={p061['Evaluation_Codes']} Real_Bugs={p061['Real_Bugs']} Mutation={p061['Mutation']}")
     assert "E5" not in split_codes(p061["Evaluation_Codes"])
     assert (p061.get("Real_Bugs") or "").lower() == "no"
@@ -85,6 +111,18 @@ def main() -> None:
     print(f"  P037 DOI={p037['DOI']}")
     assert "ICST" in (p037.get("Venue") or "")
     assert "ICST69053" in (p037.get("DOI") or "").upper()
+    print()
+    print("=== Cross-factor map spot checks ===")
+    cmap = {r["Relationship"]: r for r in load("cross_factor_evidence_map.csv")}
+    c3e4 = cmap["repository_context_to_mutation"]
+    c3e5 = cmap["repository_context_to_real_bugs"]
+    f4e5 = cmap["mutation_feedback_to_real_bugs"]
+    print(f"  C3→E4: N={c3e4['N_Studies']} {c3e4['Evidence_Strength']}")
+    print(f"  C3→E5: N={c3e5['N_Studies']} {c3e5['Evidence_Strength']}")
+    print(f"  F4→E5: N={f4e5['N_Studies']} {f4e5['Evidence_Strength']}")
+    assert int(c3e4["N_Studies"]) == 4 and c3e4["Evidence_Strength"] == "STRONG"
+    assert int(c3e5["N_Studies"]) == 0 and c3e5["Evidence_Strength"] == "ABSENT"
+    assert int(f4e5["N_Studies"]) == 1 and f4e5["Evidence_Strength"] == "MODERATE"
     print()
     print("=== Precomputed statistics file (sample) ===")
     for row in stats:
@@ -100,7 +138,8 @@ def main() -> None:
     print()
     cfe_bugs = [r["Paper_ID"] for r in cfe if (r.get("Real_Bugs") or "").lower() == "yes"]
     print(f"coverage_fault_evidence Real_Bugs=yes: {len(cfe_bugs)} -> {', '.join(cfe_bugs)}")
-    assert len(cfe_bugs) == 13
+    assert len(cfe_bugs) == 9
+    assert sorted(cfe_bugs) == expect_e5
     print()
     print("OK: core statistics checks passed.")
 

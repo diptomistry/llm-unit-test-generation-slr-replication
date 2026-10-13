@@ -73,22 +73,22 @@ are **multi-label**. Realism (RL) is **exclusive** (one level per study).
 
 Coded in `data/evidence_quality_matrix.csv` to support interpretation (not automatic exclusion):
 
-1. Benchmark/project described  
-2. Model/configuration reported  
-3. Strong baseline (proxy)  
-4. Same-model control (proxy)  
-5. Repeated runs  
-6. Statistical analysis  
-7. Mutation evaluation  
-8. Real-bug evaluation  
-9. Repository or industrial realism  
-10. Public artifact confirmed  
+1. Benchmark/project described
+2. Model/configuration reported
+3. Strong baseline (proxy)
+4. Same-model control (proxy)
+5. Repeated runs
+6. Statistical analysis
+7. Mutation evaluation
+8. Real-bug evaluation
+9. Repository or industrial realism
+10. Public artifact confirmed
 
 Values are typically `yes` / `no` / `NR` (not reported / not extracted).
 
 ## Frozen classification notes (audited)
 
-- **E5 real-fault evidence:** 13/64 (20.3%).  
-- **E4 mutation evaluation:** 12/64 (18.8%).  
-- **P061 (UAgent):** coded `E3;E4`, `Real_Bugs=no` — evaluates mutation score on HumanEval; not E5.  
+- **E5 real-fault evidence:** 9/64 (14.1%) after 2026-10-13 codebook-aligned cleanup (definition unchanged; see package `CHANGELOG_2026-10-13.md`).
+- **E4 mutation evaluation:** 12/64 (18.8%).
+- **P061 (UAgent):** coded `E3;E4`, `Real_Bugs=no` — evaluates mutation score on HumanEval; not E5.
 - **P037:** canonical bibliographic record is ICST 2026 proceedings (DOI `10.1109/ICST69053.2026.00040`); arXiv:2601.09695 is the preprint.

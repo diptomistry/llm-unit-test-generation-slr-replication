@@ -2,6 +2,8 @@
 
 This repository is a **research data and reproducibility package** for a systematic review of empirical studies on LLM-based unit-test generation. It focuses on **context construction**, **feedback/repair**, **repository realism**, and an **evaluation hierarchy** from executability through coverage and mutation to real-fault evidence.
 
+**Public repository:** https://github.com/diptomistry/llm-unit-test-generation-slr-replication
+
 It contains the frozen corpus tables, screening protocol, taxonomy codebook, evidence coding, and scripts needed to recompute headline statistics.
 
 **This repository does not host the manuscript.** Publication details (citation to the paper, journal DOI, etc.) can be added after publication.
@@ -13,18 +15,26 @@ It contains the frozen corpus tables, screening protocol, taxonomy codebook, evi
 | Freeze date | 2026-10-05 |
 | Primary studies | 64 (P001–P064) |
 | Secondary surveys | 10 (S01–S10; not mixed into \(n=64\) denominators) |
+| Coverage-related evaluation (E3) | 60/64 (93.8%) |
 | Mutation evaluation (E4) | 12/64 (18.8%) |
-| Real-fault evidence (E5) | 13/64 (20.3%) |
+| Real-fault evidence (E5) | 9/64 (14.1%) |
+| Industrial/developer evidence (E6) | 5/64 (7.8%) |
+| Mutation feedback (F4) | 2/64 (3.1%) |
+| Repository-relevant realism (RL3∪RL4) | 23/64 (35.9%) |
+
+**Post-freeze sync (2026-10-13):** codebook-aligned E5 cleanup and P001→AthenaTest identity correction. See `CHANGELOG_2026-10-13.md`. Screening ledgers remain historical and were not rewritten.
 
 Spot checks encoded in the reproduction script:
 
+- **P001** is AthenaTest (arXiv `2009.05617`, year 2020); not the Methods2Test ACM DOI.
 - **P061** is `E3;E4` with `Real_Bugs=no` (not E5).
 - **P037** canonical venue is ICST 2026 (DOI `10.1109/ICST69053.2026.00040`); arXiv is retained as preprint URL only.
+- Cross-factor: C3→E5 ABSENT (N=0); C3→E4 STRONG (N=4).
 
 ## Repository layout
 
 ```
-public-replication-package/
+llm-unit-test-generation-slr-replication/
 ├── README.md
 ├── CITATION.cff
 ├── LICENSE-CODE          # MIT — scripts/
@@ -66,6 +76,7 @@ Definitions live in `protocol/codebook.md`:
 
 - `search_log.md` — recorded API queries and hit counts
 - `inclusion_exclusion.md` — IC/EC criteria and operational screening codes
+- `INTERPRETATION_ADDENDUM_2026-10-13.md` — post-hoc BART/IC1 and foundational-primary readings (not preregistered)
 - `citation_chaining_log.md` — citation-chaining round
 - `codebook.md` — taxonomy definitions and classification notes
 
@@ -74,11 +85,15 @@ Definitions live in `protocol/codebook.md`:
 Requires Python 3 (standard library only):
 
 ```bash
-cd public-replication-package
+cd llm-unit-test-generation-slr-replication
 python3 scripts/reproduce_statistics.py
 ```
 
-The script asserts \(n=64\), E4=12, E5=13, P061 not E5, and P037 ICST metadata.
+The script asserts \(n=64\), E3=60, E4=12, E5=9 (exact ID set), E6=5, F4=2, RL3∪RL4=23, cross-factor cells, P061 not E5, P001 AthenaTest identity, and P037 ICST metadata.
+
+## Change history
+
+- `CHANGELOG_2026-10-13.md` — E5 13→9 reclassification; P001 identity correction; map/stats sync.
 
 ## Data-quality notes
 

@@ -22,7 +22,7 @@ P020,Using Large Language Models to Generate JUnit Tests: An Empirical Study,NR,
 P021,A Large-Scale Empirical Study on Fine-Tuning Large Language Models for Unit Testing,NR,NR,NR,NR,NR,NR,NR,NR,not confirmed from publisher page this pass
 P022,ASTER: Natural and Multi-Language Unit Test Generation with LLMs,NR,NR,NR,NR,NR,NR,NR,NR,not confirmed from publisher page this pass
 P023,Advancing Code Coverage: Incorporating Program Analysis with Large Language Models,NR,NR,NR,NR,NR,NR,NR,NR,not confirmed from publisher page this pass
-P024,"A Cascaded Pipeline for Self-Directed, Model-Agnostic Unit Test Generation via LLMs",NR,NR,NR,NR,NR,NR,NR,NR,not confirmed from publisher page this pass
+P024,CasModaTest: A Cascaded and Model-agnostic Self-directed Framework for Unit Test Generation,NR,NR,NR,NR,NR,NR,NR,NR,not confirmed from publisher page this pass
 P025,CoverUp: Effective High Coverage Test Generation for Python,NR,NR,NR,NR,NR,NR,NR,NR,search CoverUp artifact
 P026,CubeTesterAI: Automated JUnit Test Generation Using the LLaMA Model,NR,NR,NR,NR,NR,NR,NR,NR,not confirmed from publisher page this pass
 P027,Enhancing LLM’s Ability to Generate More Repository-Aware Unit Tests Through Precise Context Injection,NR,NR,NR,NR,NR,NR,NR,NR,not confirmed from publisher page this pass
@@ -33,7 +33,7 @@ P031,"TestForge: Feedback-Driven, Agentic Test Suite Generation",NR,NR,NR,NR,NR,
 P032,Type-aware LLM-based Regression Test Generation for Python Programs,NR,NR,NR,NR,NR,NR,NR,NR,not confirmed from publisher page this pass
 P033,Automated Unit Test Generation via Chain-of-Thought Prompt and Reinforcement Learning from Coverage Feedback,NR,NR,NR,NR,NR,NR,NR,NR,not confirmed from publisher page this pass
 P034,CITYWALK : Enhancing LLM-Based C++ Unit Test Generation via Project-Dependency Awareness and Language-Specific Knowledge,candidate,https://github.com/ai4ce/CityWalker,yes,NR,NR,NR,NR,NR,Top GitHub search hit 'ai4ce/CityWalker' — NOT confirmed official unless paper links it
-P035,Context Matters: Improving the Practical Reliability of LLM-Based Unit Test Generation (Experience Paper),NR,NR,NR,NR,NR,NR,NR,NR,CATGen industrial — may be partial
+P035,Context Matters: Improving the Practical Reliability of LLM-Based Unit Test Generation,NR,NR,NR,NR,NR,NR,NR,NR,CATGen industrial — may be partial
 P036,Do Coverage and Mutation Scores of LLM-Generated Test Suites Correlate with Their Effectiveness? (Replicability Study),NR,NR,NR,NR,NR,NR,NR,NR,Zhao et al. replicability study — check artifact
 P037,How well LLM-based test generation techniques perform with newer LLM versions?,NR,NR,NR,NR,NR,NR,NR,NR,not confirmed from publisher page this pass
 P038,Impact of code context and prompting strategies on automated unit test generation with modern general-purpose large language models,candidate,https://github.com/jettbrains/-L-,yes,NR,NR,NR,NR,NR,Top GitHub search hit 'jettbrains/-L-' — NOT confirmed official unless paper links it

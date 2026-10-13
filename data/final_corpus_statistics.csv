@@ -1,5 +1,5 @@
 Statistic,Count,Fraction,Percent,Denominator
-studies_year_2022,1,1/64,1.6%,64
+studies_year_2020,1,1/64,1.6%,64
 studies_year_2023,1,1/64,1.6%,64
 studies_year_2024,21,21/64,32.8%,64
 studies_year_2025,24,24/64,37.5%,64
@@ -36,11 +36,11 @@ evaluation_E1,10,10/64,15.6%,64
 evaluation_E2,14,14/64,21.9%,64
 evaluation_E3,60,60/64,93.8%,64
 evaluation_E4,12,12/64,18.8%,64
-evaluation_E5,13,13/64,20.3%,64
+evaluation_E5,9,9/64,14.1%,64
 evaluation_E6,5,5/64,7.8%,64
 reports_coverage_flag,60,60/64,93.8%,64
 reports_mutation_flag,12,12/64,18.8%,64
-reports_real_bugs_flag,13,13/64,20.3%,64
+reports_real_bugs_flag,9,9/64,14.1%,64
 repository_level_yes,23,23/64,35.9%,64
 industrial_yes,6,6/64,9.4%,64
 artifact_yes,3,3/64,4.7%,64
